@@ -35,9 +35,11 @@ body {
 }
 /* BODY OF THE VIDEO CONSOLE */
 
-    /* JOYCONS */
+/* JOYCONS */
 .console-joycon {
     display: flex;
+    justify-content: center;
+    align-items: center;
     
     width: 11vw;
     height: 27vw;
@@ -46,12 +48,38 @@ body {
 }
 
 .joycon-left {
-
+    border-radius: 5vw 0 0 5vw;
 }
 
 .joycon-right {
-
+    border-radius: 0 5vw 5vw 0;
 }
+
+.joycon-buttons {
+    display: grid;
+    grid-template-rows: 1fr 4fr 4fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    width: 7vw;
+    height: 24vw;
+}
+
+.buttons-minplus {
+    grid-row: 1 / 2;
+    /* display: flex; */
+    /* font-size: 1em; */
+    color: black;
+}
+
+.button-min {
+    grid-column: 2 / 3;
+    justify-self: end;
+}
+
+.button-plus {
+    grid-column: 1 / 2;
+    justify-self: start;
+}
+
 /* SCREEN */
 .console-screen {
     display: flex;
@@ -101,6 +129,5 @@ body {
     display: flex;
     width: 37.5vw;
     height: 24vw;
-    /* border-radius: 0.1vw; */
     background-color: #ccc;
 }
