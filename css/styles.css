@@ -1,0 +1,106 @@
+/* GLOBAL */
+:root {
+    --green-switch: #02E152;
+    --pink-switch: #FF4984;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+}
+
+body {
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: aquamarine;
+}
+
+/* NINTENDO SWITCH */
+.container {
+    width: 65vw;
+    height: 27vw;
+
+    background-color: burlywood;
+}
+/* TOP BUTTONS */
+.container-console {
+    display: flex;
+}
+/* BODY OF THE VIDEO CONSOLE */
+
+    /* JOYCONS */
+.console-joycon {
+    display: flex;
+    
+    width: 11vw;
+    height: 27vw;
+
+    background-color: red;
+}
+
+.joycon-left {
+
+}
+
+.joycon-right {
+
+}
+/* SCREEN */
+.console-screen {
+    display: flex;
+    justify-content: space-between;
+    width: 55vw;
+
+    background-color: #444
+}
+
+.screen-notch {
+    width: 1vw;
+    height: 1vw;
+
+    background-color: aquamarine;
+}
+
+.left-notch {
+    border-radius: 0 0 0.6vw 0;
+}
+
+.right-notch {
+    border-radius: 0 0 0 0.6vw;
+}
+
+.screen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 43.5vw;
+    height: 27vw;
+
+    background-color: #444;
+}
+
+.screen-frame {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 43.5vw;
+    height: 26vw;
+    border-radius: 1vw;
+    background-color: black;
+}
+
+.screen-in {
+    display: flex;
+    width: 37.5vw;
+    height: 24vw;
+    /* border-radius: 0.1vw; */
+    background-color: #ccc;
+}
