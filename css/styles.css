@@ -29,10 +29,12 @@ body {
 
     background-color: burlywood;
 }
+
 /* TOP BUTTONS */
 .container-console {
     display: flex;
 }
+
 /* BODY OF THE VIDEO CONSOLE */
 
 /* JOYCONS */
@@ -40,13 +42,14 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    
+
     width: 11vw;
     height: 27vw;
 
     background-color: red;
 }
 
+/* LEFT JOYCON */
 .joycon-left {
     border-radius: 5vw 0 0 5vw;
 }
@@ -65,16 +68,134 @@ body {
 
 .buttons-minplus {
     grid-row: 1 / 2;
-    /* display: flex; */
-    /* font-size: 1em; */
+
+    display: flex;
     color: black;
 }
+
+.buttons-joystick {
+    grid-column: 1 / 3;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.joystick-left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 5vw;
+    height: 5vw;
+    background-color: black;
+    border-radius: 100%;
+}
+
+.joystick-left-in {
+    width: 4vw;
+    height: 4vw;
+
+    background-color: white;
+    border-radius: 100%;
+}
+
+.buttons-crosshead {
+    grid-column: 1 / 3;
+    display: flex;
+    justify-content: center;
+}
+
+.crosshead-grid {
+    width: 8vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+
+.crosshead {
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    background-color: #444;
+    box-shadow: var(--black-shadow) 0.25vw 0.25vw 0.25vw, var(--white-shadow) 0.25vw 0.25vw 0.15vw inset;
+}
+
+.crosshead-up {
+    grid-column: 2 / 3;
+}
+
+.crosshead-right {
+    grid-column: 3 / 4;
+    grid-row: 2 / 3;
+}
+
+.crosshead-down {
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+}
+
+.crosshead-left {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+}
+
+.arrow {
+    border: 0.5vw solid transparent;
+}
+
+.arrow-up {
+    border-bottom: 1vw solid black;
+    margin-bottom: 0.75vw;
+}
+
+.arrow-right {
+    border-left: 1vw solid black;
+    margin-left: 0.75vw;
+}
+
+.arrow-down {
+    border-top: 1vw solid black;
+    margin-top: 0.75vw;
+}
+
+.arrow-left {
+    border-right: 1vw solid black;
+    margin-right: 0.75vw;
+}
+
+.buttons-capture-home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    height: 2vw;
+    width: 2vw;
+}
+
+.capture {
+    grid-column: 2 / 3;
+}
+
+.button-capture {
+    background-color: white;
+    border-radius: 100%;
+    height: 1vw;
+    width: 1vw;
+}
+/* SOLUCIONAR RESPONSIVE DE + - */
+/* .buttons-minplus i {
+    height: .1vw;
+    width: .1vw;
+} */
 
 .button-min {
     grid-column: 2 / 3;
     justify-self: end;
 }
 
+/* RIGHT JOYCON */
 .button-plus {
     grid-column: 1 / 2;
     justify-self: start;
