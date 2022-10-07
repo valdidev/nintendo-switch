@@ -12,7 +12,7 @@ body {
     justify-content: center;
     align-items: center;
 
-    background-color: aquamarine;
+    background-color: burlywood;
     font-family: 'Arial';
 }
 
@@ -23,17 +23,57 @@ body {
 }
 
 /* TOP BUTTONS */
+.container-top-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: -5.7vw;
+}
 
+.box-buttons-lr {
+    height: 6vw;
+    width: 7vw;
+    z-index: 9;
+    background-color: #414548;
+}
+
+.box-buttons-l {
+    border-radius: 5vw 0 0 0;
+}
+
+.box-buttons-r {
+    border-radius: 0 5vw 0 0;
+}
+
+.box-buttons-volume {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 40vw;
+    height: 6vw;
+    padding-left: 3vw;
+}
+
+.button-volume {
+    width: 1.5vw;
+    height: 1vw;
+    background-color: #3b3e41;
+}
+
+.button-volume-up {
+    margin-left: 1vw ;
+}
 
 /* BODY OF THE VIDEO CONSOLE */
 .container-console {
     display: flex;
 }
-/* JOYCONS */
+    /* JOYCONS */
 .console-joycon {
     display: flex;
     justify-content: center;
     align-items: center;
+
+    z-index: 99;
 
     width: 11vw;
     height: 27vw;
@@ -41,7 +81,7 @@ body {
     background-color: red;
 }
 
-/* LEFT JOYCON */
+        /* LEFT JOYCON */
 .joycon-left {
     border-radius: 5vw 0 0 5vw;
     background-color: #02E152;
@@ -63,14 +103,12 @@ body {
 
     display: flex;
     justify-content: center;
-    color: black;
+    color: #505559;
 
     font-size: 2vw;
     font-weight: 900;
     text-shadow: .1vw .1vw .1vw #333;
 }
-
-
 
 .buttons-joystick {
     display: flex;
@@ -101,7 +139,6 @@ body {
     height: 4vw;
 
     background-color: #3E4245;
-    
     box-shadow: #5E6063 .2vw .2vw .5vw,
                    #222 .1vw .1vw .5vw inset ;
     border-radius: 100vw;
@@ -139,7 +176,7 @@ body {
     background-color: #44454b;
     width: 2vw;
     height: 2vw;
-    box-shadow: #444 0.2vw 0.2vw 0.25vw, #ccc 0.15vw 0.15vw 0.15vw inset;
+    box-shadow: #444 0.2vw 0.2vw 0.25vw, rgb(140, 137, 137) 0.15vw 0.15vw 0.15vw inset;
 }
 
 .crosshead-up {
@@ -218,11 +255,7 @@ body {
     justify-self: end;
 }
 
-/* .minus {
-    font-size: 1.1em;
-} */
-
-/* RIGHT JOYCON */
+        /* RIGHT JOYCON */
 .joycon-right {
     border-radius: 0 5vw 5vw 0;
     background-color: #FF4984;
@@ -235,10 +268,6 @@ body {
     grid-column: 1 / 2;
     justify-self: start;
 }
-
-/* .plus {
-    
-} */
 
 .buttons-crosshead-right {
     grid-column: 1 / 3;
@@ -257,7 +286,7 @@ body {
 .crosshead-letter {
     font-size: 1.2vw;
     text-align: center;
-    color: rgb(228, 212, 212);
+    color: #fff;
 }
 
 .home {
@@ -310,7 +339,7 @@ body {
     width: 1vw;
     height: 1vw;
 
-    background-color: aquamarine;
+    background-color: #D8B485;
 }
 
 .left-notch {
