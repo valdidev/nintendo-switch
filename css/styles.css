@@ -1,10 +1,3 @@
-/* GLOBAL */
-:root {
-    --green-switch: #02E152;
-    --pink-switch: #FF4984;
-}
-
-
 * {
     margin: 0;
     padding: 0;
@@ -20,23 +13,22 @@ body {
     align-items: center;
 
     background-color: aquamarine;
+    font-family: 'Arial';
 }
 
 /* NINTENDO SWITCH */
 .container {
     width: 65vw;
     height: 27vw;
-
-    background-color: burlywood;
 }
 
 /* TOP BUTTONS */
+
+
+/* BODY OF THE VIDEO CONSOLE */
 .container-console {
     display: flex;
 }
-
-/* BODY OF THE VIDEO CONSOLE */
-
 /* JOYCONS */
 .console-joycon {
     display: flex;
@@ -52,15 +44,15 @@ body {
 /* LEFT JOYCON */
 .joycon-left {
     border-radius: 5vw 0 0 5vw;
-}
-
-.joycon-right {
-    border-radius: 0 5vw 5vw 0;
+    background-color: #02E152;
+    box-shadow: rgba(154, 151, 151, 0.1) 1vw 1vw 0.25vw inset,
+                rgba(28, 27, 27, 0.114) 0 -1vw 0.25vw inset,
+                #555 0 1vw 1.5vw;
 }
 
 .joycon-buttons {
     display: grid;
-    grid-template-rows: 1fr 4fr 4fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
     grid-template-columns: 1fr 1fr;
     width: 7vw;
     height: 24vw;
@@ -70,56 +62,84 @@ body {
     grid-row: 1 / 2;
 
     display: flex;
+    justify-content: center;
     color: black;
+
+    font-size: 2vw;
+    font-weight: 900;
+    text-shadow: .1vw .1vw .1vw #333;
 }
 
-.buttons-joystick {
-    grid-column: 1 / 3;
 
+
+.buttons-joystick {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.joystick-left {
+.buttons-joystick-left {
+    grid-column: 1 / 3;
+    grid-row: 2 / 3;
+    align-self: baseline;
+    padding-bottom: 4vw;
+}
+
+.joystick {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 5vw;
     height: 5vw;
-    background-color: black;
-    border-radius: 100%;
+    background-color: #1D1F1F;
+    box-shadow: #555 .2vw .2vw .5vw;
+    border-radius: 100vw;
 }
 
-.joystick-left-in {
+.joystick-in {
     width: 4vw;
     height: 4vw;
 
-    background-color: white;
-    border-radius: 100%;
+    background-color: #3E4245;
+    
+    box-shadow: #5E6063 .2vw .2vw .5vw,
+                   #222 .1vw .1vw .5vw inset ;
+    border-radius: 100vw;
 }
 
 .buttons-crosshead {
-    grid-column: 1 / 3;
     display: flex;
     justify-content: center;
+    align-items: center;
+    width: 7vw;
+    height: 8vw;
+
+}
+
+.buttons-crosshead-left {
+    grid-column: 1 / 3;
+    grid-row: 3 / 4;
+    padding-bottom: 6vw;
 }
 
 .crosshead-grid {
-    width: 8vw;
+    width: 6vw;
+    height: 6vw;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
 }
 
 .crosshead {
-    border-radius: 100%;
+    border-radius: 100vw;
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 1px solid black;
-    background-color: #444;
-    box-shadow: var(--black-shadow) 0.25vw 0.25vw 0.25vw, var(--white-shadow) 0.25vw 0.25vw 0.15vw inset;
+    border: .1vw solid #212839;
+    background-color: #44454b;
+    width: 2vw;
+    height: 2vw;
+    box-shadow: #444 0.2vw 0.2vw 0.25vw, #ccc 0.15vw 0.15vw 0.15vw inset;
 }
 
 .crosshead-up {
@@ -146,22 +166,22 @@ body {
 }
 
 .arrow-up {
-    border-bottom: 1vw solid black;
+    border-bottom: 1vw solid #1F2123;
     margin-bottom: 0.75vw;
 }
 
 .arrow-right {
-    border-left: 1vw solid black;
+    border-left: 1vw solid #1F2123;
     margin-left: 0.75vw;
 }
 
 .arrow-down {
-    border-top: 1vw solid black;
+    border-top: 1vw solid #1F2123;
     margin-top: 0.75vw;
 }
 
 .arrow-left {
-    border-right: 1vw solid black;
+    border-right: 1vw solid #1F2123;
     margin-right: 0.75vw;
 }
 
@@ -169,36 +189,111 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: black;
+    background-color: #4E4F51;
+    border: .1vw solid #444;
+    box-shadow: 0 0 .2vw #191A24;
     height: 2vw;
     width: 2vw;
 }
 
 .capture {
     grid-column: 2 / 3;
+    grid-row: 4 / 5;
+    justify-self: flex-end;
 }
 
 .button-capture {
-    background-color: white;
-    border-radius: 100%;
-    height: 1vw;
-    width: 1vw;
+    display: flex;
+    background-color: #36383C;
+    border: .1vw solid #444;
+    box-shadow: .1vw .1vw .1vw inset #222;
+    border-radius: 100vw;
+    height: 1.5vw;
+    width: 1.5vw;
 }
-/* SOLUCIONAR RESPONSIVE DE + - */
-/* .buttons-minplus i {
-    height: .1vw;
-    width: .1vw;
-} */
+
 
 .button-min {
     grid-column: 2 / 3;
     justify-self: end;
 }
 
+/* .minus {
+    font-size: 1.1em;
+} */
+
 /* RIGHT JOYCON */
+.joycon-right {
+    border-radius: 0 5vw 5vw 0;
+    background-color: #FF4984;
+    box-shadow: rgba(0, 0, 0, 0.10) -1vw -1vw 0.25vw inset, 
+                rgba(69, 66, 66, 0.103) 0 1vw 0.25vw inset, 
+                #555 0 1vw 1.5vw;
+}
+
 .button-plus {
     grid-column: 1 / 2;
     justify-self: start;
+}
+
+/* .plus {
+    
+} */
+
+.buttons-crosshead-right {
+    grid-column: 1 / 3;
+    grid-row: 2 / 3;
+
+    padding-bottom: 2vw;
+}
+
+.buttons-joystick-right {
+    grid-column: 1 / 3;
+    grid-row: 3 / 4;
+
+    padding-bottom: 5vw;
+}
+
+.crosshead-letter {
+    font-size: 1.2vw;
+    text-align: center;
+    color: rgb(228, 212, 212);
+}
+
+.home {
+    grid-column: 1 / 2;
+    grid-row: 4 / 5;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 2vw;
+    height: 2vw;
+
+    border-radius: 100vw;
+    background-color: #4E4F51;
+    border: .1vw solid #444;
+    box-shadow: 0 0 .2vw #191A24;
+}
+
+.home-house {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1.6vw;
+    height: 1.5vw;
+
+    border-radius: 100vw;
+    background-color: #36383C;
+    border: .1vw solid #444;
+    box-shadow: .1vw .1vw .1vw inset #222;
+}
+
+.home-house svg {
+    width: 1.1vw;
+    height: 1.1vw;
+    color: #08090C;
 }
 
 /* SCREEN */
@@ -207,7 +302,8 @@ body {
     justify-content: space-between;
     width: 55vw;
 
-    background-color: #444
+    background-color: #323435;
+    box-shadow: #555 0 1vw 1.5vw;
 }
 
 .screen-notch {
@@ -233,7 +329,7 @@ body {
     width: 43.5vw;
     height: 27vw;
 
-    background-color: #444;
+    background-color: #323435;
 }
 
 .screen-frame {
@@ -242,13 +338,14 @@ body {
     align-items: center;
     width: 43.5vw;
     height: 26vw;
+    border: .2vw solid #19191B;
     border-radius: 1vw;
-    background-color: black;
+    background-color: #000;
 }
 
 .screen-in {
     display: flex;
     width: 37.5vw;
     height: 24vw;
-    background-color: #ccc;
+    background-color: #1A2026;
 }
